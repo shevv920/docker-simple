@@ -12,11 +12,11 @@ services:
     command: node src/index.js
   db:
     image: "mongo:4.2"
-    container_name: mongo
+    container_name: vs_mongo
     ports:
       - "27017:27017"
     volumes:     
-      - "dbdata:/data/db"
+      - "dbdata:/data/vs_db"
     networks:
       - "vs_app_network"
     
