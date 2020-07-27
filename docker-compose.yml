@@ -1,0 +1,23 @@
+version: '3.6'
+ 
+services:
+  shevv920/vs-app:
+    build: .
+    ports:
+      - "31990:31990"
+    networks:
+      - app-network
+    command: node src/index.js
+  db:
+    image: mongo:4.2
+    container_name: mongo
+    volumes:     
+      - dbdata:/data/db
+    networks:
+      - app-network
+    
+networks:
+  app-network:
+  
+volumes:
+  dbdata:
