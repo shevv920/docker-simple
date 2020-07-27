@@ -13,10 +13,8 @@ services:
   db:
     image: "mongo:4.2"
     container_name: vs_mongo
-    ports:
-      - "37017:27017"
     volumes:     
-      - "dbdata:/data/vs_db"
+      - "vs_dbdata:/data/vs_db"
     networks:
       - "vs_app_network"
     
@@ -24,4 +22,4 @@ networks:
   vs_app_network:
   
 volumes:
-  dbdata:
+  vs_dbdata:
