@@ -1,0 +1,26 @@
+{
+  "name": "docker-simple",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shevv920/docker-simple.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shevv920/docker-simple/issues"
+  },
+  "homepage": "https://github.com/shevv920/docker-simple#readme",
+  "dependencies": {
+    "@koa/router": "^9.3.1",
+    "@paralect/node-mongo": "^2.0.0-beta.5",
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0"
+  }
+}
