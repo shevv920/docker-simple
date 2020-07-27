@@ -24,10 +24,14 @@ router.post('/logs', async (ctx, next) => {
   const data = ctx.request.body;
   const { event } = data;
   if (!event) {
-    throw 'Wrong logs format: event field required';
-  } 
-  const res = await logsService.create(data);
-  ctx.body = res;
+    ctx.body = {
+      message: "Event required",
+    };
+    ctx.status = 400;
+  } else {
+    const res = await logsService.create(data);
+    ctx.body = res;
+  }
   return next();
 });
 
